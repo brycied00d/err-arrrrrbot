@@ -14,4 +14,4 @@ class ArrrrrBot(BotPlugin):
 	@botcmd
 	def slap(self, mess, args):
 		"""Let the bot slap people in the chatroom in an piratelike manner"""
-		return "/me slaps " + args[0] + " around a bit with a large trout."
+		return "/me slaps " + args + " around a bit with a large trout."
