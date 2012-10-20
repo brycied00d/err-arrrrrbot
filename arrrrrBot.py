@@ -10,3 +10,8 @@ class ArrrrrBot(BotPlugin):
 	def lod(self, mess, args):
 		"""Print the look of disapproval"""
 		return "ಠ_ಠ"
+
+	@botcmd
+	def slap(self, mess, args):
+		"""Let the bot slap people in the chatroom in an piratelike manner"""
+		return "/me slaps " + args[0] + " around a bit with a large trout."
