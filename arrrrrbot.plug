@@ -1,0 +1,6 @@
+[Core]
+Name = ArrrrrBot
+Module = arrrrrBot
+    
+[Documentation]
+Description = Various commands
