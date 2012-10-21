@@ -13,3 +13,5 @@ You can also load multiple plugins simultaneously from a parent directory:
     err-arrrrrbot/  err-codebot/
     % err.py -Tc err-arrrrrbot
     ...
+
+General information about plugin writing: https://github.com/gbin/err/wiki/plugin-dev
