@@ -1,3 +1,5 @@
+# encoding=utf-8
+
 from errbot import BotPlugin, botcmd
 from errbot.utils import get_sender_username
 
