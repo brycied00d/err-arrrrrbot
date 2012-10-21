@@ -1,0 +1,14 @@
+How to hack
+===========
+
+Please test your changes locally before pushing / creating pull requests:
+
+1. Install errbot: `pip2 install err` (or `pip`, whichever is your distribution's pip for Python 2.7)
+2. Run errbot from the project directory: `err.py -T`
+
+You can also load multiple plugins simultaneously from a parent directory:
+
+    % ls
+    err-arrrrrbot/  err-codebot/
+    % err.py -Tc err-arrrrrbot
+    ...
