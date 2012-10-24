@@ -38,6 +38,7 @@ class ArrrrrBot(BotPlugin):
 	def poke(self, mess, args):
 		"""Save a one-liner : !poke name content"""
 		argss = args.split(' ', 1)
+		name = argss[0]
 		if len(argss) == 1:
 			del self[name]
 		else:
