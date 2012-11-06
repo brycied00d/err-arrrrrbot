@@ -35,6 +35,11 @@ class ArrrrrBot(BotPlugin):
 			return "Nope."
 
 	@botcmd
+	def p(self, mess, args):
+		"""Short alias for !peek"""
+		return self.peek(mess, args)
+
+	@botcmd
 	def poke(self, mess, args):
 		"""Save a one-liner : !poke name content"""
 		argss = args.split(' ', 1)
