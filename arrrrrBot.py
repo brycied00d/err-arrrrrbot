@@ -38,6 +38,12 @@ class ArrrrrBot(BotPlugin):
 	def p(self, mess, args):
 		"""Short alias for !peek"""
 		return self.peek(mess, args)
+	
+	@botcmd
+	def rm(self, mess, args):
+		"""Alias for removing something from the one-liner memory"""
+		argss = args.split(' ', 1)
+		return self.poke(mess, argss[0]
 
 	@botcmd
 	def poke(self, mess, args):
