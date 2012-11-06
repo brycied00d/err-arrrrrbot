@@ -29,8 +29,9 @@ class ArrrrrBot(BotPlugin):
 	@botcmd
 	def peek(self, mess, args):
 		"""Print a saved one-liner"""
-		if self.has_key(args):
-			return self[args]
+		argss = args.split(' ', 1)
+		if self.has_key(argss[0]):
+			return self[argss[0]]
 		else:
 			return "Nope."
 
@@ -43,7 +44,7 @@ class ArrrrrBot(BotPlugin):
 	def rm(self, mess, args):
 		"""Alias for removing something from the one-liner memory"""
 		argss = args.split(' ', 1)
-		return self.poke(mess, argss[0]
+		return self.poke(mess, argss[0])
 
 	@botcmd
 	def poke(self, mess, args):
