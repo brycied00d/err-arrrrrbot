@@ -45,7 +45,10 @@ class ArrrrrBot(BotPlugin):
 		argss = args.split(' ', 1)
 		name = argss[0]
 		if len(argss) == 1:
-			del self[name]
+			if self.has_key(name):
+				del self[name]
+			else:
+				return "Nope."
 		else:
 			content = argss[1]
 			if len(content) > 80 or '\n' in content:
