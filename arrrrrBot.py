@@ -44,7 +44,10 @@ class ArrrrrBot(BotPlugin):
 	def rm(self, mess, args):
 		"""Alias for removing something from the one-liner memory"""
 		argss = args.split(' ', 1)
-		return self.poke(mess, argss[0])
+		for i in range(0, length(argss)):
+			self.poke(mess, argss[i]):
+		return "...Done."
+
 
 	@botcmd
 	def poke(self, mess, args):
