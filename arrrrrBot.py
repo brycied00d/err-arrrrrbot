@@ -17,6 +17,11 @@ class ArrrrrBot(BotPlugin):
 		return self.peek(mess, 'lod')
 
 	@botcmd
+	def tableflip(self, mess, args):
+		"""Print a table-flipping emoticon"""
+		return self.peek(mess, 'tableflip')
+
+	@botcmd
 	def loa(self, mess, args):
 		"""Print the look of approval"""
 		return self.peek(mess, 'loa')
