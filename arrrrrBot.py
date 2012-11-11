@@ -7,26 +7,6 @@ from errbot.utils import get_sender_username
 
 class ArrrrrBot(BotPlugin):
 	@botcmd
-	def grog(self, mess, args):
-		"""Cheers!"""
-		return self.peek(mess, 'grog')
-
-	@botcmd
-	def lod(self, mess, args):
-		"""Print the look of disapproval"""
-		return self.peek(mess, 'lod')
-
-	@botcmd
-	def tableflip(self, mess, args):
-		"""Print a table-flipping emoticon"""
-		return self.peek(mess, 'tableflip')
-
-	@botcmd
-	def loa(self, mess, args):
-		"""Print the look of approval"""
-		return self.peek(mess, 'loa')
-
-	@botcmd
 	def slap(self, mess, args):
 		"""Let the bot slap people in the chatroom in an piratelike manner"""
 		return "{0} slaps {1} around a bit with a large trout.".format(get_sender_username(mess), args)
