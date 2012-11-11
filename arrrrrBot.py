@@ -1,9 +1,9 @@
 # encoding=utf-8
 
 from config import CHATROOM_PRESENCE
-
 from errbot import BotPlugin, botcmd
 from errbot.utils import get_sender_username
+
 
 class ArrrrrBot(BotPlugin):
 	@botcmd
@@ -35,7 +35,7 @@ class ArrrrrBot(BotPlugin):
 	def peek(self, mess, args):
 		"""Print a saved one-liner"""
 		argss = args.split(' ', 1)
-		if self.has_key(argss[0]):
+		if argss[0] in self:
 			return self[argss[0]]
 		else:
 			return "Nope."
@@ -44,7 +44,7 @@ class ArrrrrBot(BotPlugin):
 	def p(self, mess, args):
 		"""Short alias for !peek"""
 		return self.peek(mess, args)
-	
+
 	@botcmd
 	def rm(self, mess, args):
 		"""Alias for removing something from the one-liner memory"""
@@ -53,14 +53,13 @@ class ArrrrrBot(BotPlugin):
 			self.poke(mess, argss[i])
 		return "...Done."
 
-
 	@botcmd
 	def poke(self, mess, args):
 		"""Save a one-liner : !poke name content"""
 		argss = args.split(' ', 1)
 		name = argss[0]
 		if len(argss) == 1:
-			if self.has_key(name):
+			if name in self:
 				del self[name]
 			else:
 				return "Nope."
@@ -79,6 +78,6 @@ class ArrrrrBot(BotPlugin):
 			result += u"{0}: \t {1}\n".format(name, self[name])
 		return result
 
-	@botcmd(admin_only = True)
+	@botcmd(admin_only=True)
 	def hiersprichtgott(self, mess, args):
 		self.send(CHATROOM_PRESENCE[0], args, message_type='groupchat')
