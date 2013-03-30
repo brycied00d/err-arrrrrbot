@@ -64,5 +64,10 @@ class ArrrrrBot(BotPlugin):
 		self.send(CHATROOM_PRESENCE[0], args, message_type='groupchat')
 
 	def callback_message(self, conn, mess):
-		if mess.getBody() in self:
-			self.send(mess.getFrom(), self[mess.getBody()], message_type=mess.getType())
+		firstword = mess.getBody()
+		try:
+			firstword = firstword[:firstword.index(' ')]
+		except ValueError:
+			pass
+		if firstword in self:
+			self.send(mess.getFrom(), self[firstword], message_type=mess.getType())
