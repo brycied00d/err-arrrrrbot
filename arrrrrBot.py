@@ -53,9 +53,9 @@ class ArrrrrBot(BotPlugin):
 	@botcmd
 	def peekpoke(self, mess, args):
 		"""List all saved one-liners (private message only)"""
-		result = u''
+		result = ""
 		for name in self.keys():
-			result += u"{0}: \t {1}\n".format(name, self[name])
+			result += "{0}: \t {1}\n".format(name, self[name])
 		return result
 
 	@botcmd(admin_only=True)
