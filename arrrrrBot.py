@@ -61,3 +61,7 @@ class ArrrrrBot(BotPlugin):
 	@botcmd(admin_only=True)
 	def hiersprichtgott(self, mess, args):
 		self.send(CHATROOM_PRESENCE[0], args, message_type='groupchat')
+
+	def callback_message(self, conn, mess):
+		if mess.getBody() in self:
+			self.send(mess.getFrom(), self[mess.getBody()], message_type=mess.getType())
