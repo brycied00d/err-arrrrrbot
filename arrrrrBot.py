@@ -49,6 +49,7 @@ class ArrrrrBot(BotPlugin):
 				return "Nope."
 			else:
 				self[name] = content
+				return "Got it."
 
 	@botcmd
 	def peekpoke(self, mess, args):
