@@ -63,11 +63,11 @@ class ArrrrrBot(BotPlugin):
 	def hiersprichtgott(self, mess, args):
 		self.send(CHATROOM_PRESENCE[0], args, message_type='groupchat')
 
-	def callback_message(self, conn, mess):
-		firstword = mess.getBody()
+	def callback_message(self, mess):
+		firstword = mess.body
 		try:
 			firstword = firstword[:firstword.index(' ')]
 		except ValueError:
 			pass
 		if firstword in self:
-			self.send(mess.getFrom(), self[firstword], message_type=mess.getType())
+			self.send(mess.frm, self[firstword], message_type=mess.type)
